@@ -9,9 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using MPro.Models;
+using System.Web.Http.Cors;
 
 namespace MPro.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class UsersController : ApiController
     {
         private EventsEntities2 db = new EventsEntities2();

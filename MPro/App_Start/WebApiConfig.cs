@@ -15,7 +15,7 @@ namespace MPro
                 var jsonpFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
                 config.Formatters.Add(jsonpFormatter);
 
-                var cors = new EnableCorsAttribute("http://localhost:51131", "*", "GET,POST");
+                var cors = new EnableCorsAttribute("http://localhost:51131/", "*", "GET,POST");
                 config.EnableCors(cors);
 
             // Web API routes
