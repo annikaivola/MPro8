@@ -24,7 +24,7 @@ namespace MPro.Controllers
             return db.User;
         }
 
-        // GET: api/Users/5
+        //GET: api/Users/5
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {
@@ -36,6 +36,20 @@ namespace MPro.Controllers
 
             return Ok(user);
         }
+        //GET: api/users/email
+        [ResponseType(typeof(User))]
+        public IHttpActionResult GetUser(string maili)
+        {
+            var user = db.User.Where(u => u.email == maili).FirstOrDefault();
+
+            if(user == null)
+            {
+                return null;
+            }
+
+            return Ok(user);
+        }
+
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
