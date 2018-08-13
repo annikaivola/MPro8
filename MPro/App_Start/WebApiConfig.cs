@@ -7,7 +7,7 @@ using System.Web.Http.Cors;
 
 namespace MPro
 {
-    public static class WebApiConfig
+    public static class WebApiConfig //git harjotuksia lol jee
     {
         public static void Register(HttpConfiguration config)
         {
